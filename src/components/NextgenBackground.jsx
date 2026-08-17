@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import tennisShowcase from '../assets/nextGenthumb2.png';
+import tennisShowcase from '../assets/nextgenthumb2.png';
 
 export default function NextGenBackground({ className = '', imgClassName = '', align = 'center' }) {
   const isTop = align === 'top';
