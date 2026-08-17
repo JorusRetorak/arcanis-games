@@ -80,10 +80,8 @@ export default function Home() {
 
       <GameGallery items={nextGenMedia} showHeader={false} />
 
-      {/* ---------------- PILLARS ---------------- */}
       <PillarsGrid />
 
-      {/* ---------------- CTA ---------------- */}
       <div className="relative w-full py-24 md:py-40 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40 pointer-events-none select-none">
           <Sigil size={640} spin={true} />

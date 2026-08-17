@@ -62,40 +62,43 @@ export default function Contact() {
           Questions, feedback, or just want to say hi? We'd love to hear from you.
         </p>
       </motion.div>
-
+      
       {/* Contact methods */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.5 }}
-        className="border border-line rounded-2xl bg-ink-2/60 p-6 flex flex-col gap-4 max-w-2xl mx-auto w-full"
+        className="border border-line rounded-2xl bg-ink-2/60 p-6 w-full"
       >
-        <h3 className="text-xs tracking-[0.2em] text-arcane-400 font-mono font-bold uppercase">Contact Methods</h3>
+        <h3 className="text-xs tracking-[0.2em] text-arcane-400 font-mono font-bold uppercase mb-6">Contact Methods</h3>
 
-        {CONTACT_METHODS.map((c) => (
-          <motion.a
-            key={c.name}
-            href={c.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ y: -3 }}
-            className="flex items-center gap-4 p-4 border border-line rounded-xl hover:border-arcane-500/50 transition-colors"
-          >
-            <img src={c.logo} className="w-11 h-11 object-contain shrink-0" alt={c.name} />
-            <div className="flex flex-col min-w-0">
-              <div className="flex items-center gap-2">
-                <h4 className="font-bold text-fog truncate">{c.name}</h4>
-                <span className="text-[10px] uppercase tracking-wide text-arcane-400 border rounded-md px-1.5 py-0.5 shrink-0" style={{ borderColor: 'rgba(232,91,206,0.3)' }}>
-                  {c.badge}
-                </span>
+        {/* This wrapper creates the 3-column horizontal grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {CONTACT_METHODS.map((c) => (
+            <motion.a
+              key={c.name}
+              href={c.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -3 }}
+              className="flex items-center gap-4 p-4 border border-line rounded-xl hover:border-arcane-500/50 transition-colors"
+            >
+              <img src={c.logo} className="w-11 h-11 object-contain shrink-0" alt={c.name} />
+              <div className="flex flex-col min-w-0">
+                <div className="flex items-center gap-2">
+                  <h4 className="font-bold text-fog truncate">{c.name}</h4>
+                  <span className="text-[10px] uppercase tracking-wide text-arcane-400 border rounded-md px-1.5 py-0.5 shrink-0" style={{ borderColor: 'rgba(232,91,206,0.3)' }}>
+                    {c.badge}
+                  </span>
+                </div>
+                <span className="text-sm text-mist mt-0.5">{c.handle}</span>
               </div>
-              <span className="text-sm text-mist mt-0.5">{c.handle}</span>
-            </div>
-          </motion.a>
-        ))}
+            </motion.a>
+          ))}
+        </div>
 
-        <div className="border-t border-line pt-4 text-sm text-mist-dim">
+        <div className="border-t border-line mt-6 pt-4 text-sm text-mist-dim">
           Discord is the fastest way to get a response.
         </div>
       </motion.div>

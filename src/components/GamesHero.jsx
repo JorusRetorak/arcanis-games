@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import NextGenBackground from '../assets/hero-bg.png';
+import NextGenBackground from './NextGenBackground';
 
 const icons = {
   controller: (
@@ -59,11 +59,7 @@ export default function GamesHero() {
       </div>
 
       <div className="relative w-full lg:w-1/2 flex items-center justify-center pointer-events-none min-h-[360px] lg:min-h-0">
-        <img 
-          src={NextGenBackground} 
-          alt="NextGen Tennis" 
-          className="w-full h-auto object-contain drop-shadow-2xl"
-        />
+        <NextGenBackground />
       </div>
     </section>
   );

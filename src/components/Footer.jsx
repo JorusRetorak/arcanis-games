@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-// The mark-only version (no text), transparent background:
-//   src/assets/LogoNoBG.png
 import logoMark from '../assets/LogoNoBG.png';
 
 const MotionLink = motion(Link);

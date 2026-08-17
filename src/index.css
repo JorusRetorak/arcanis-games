@@ -10,25 +10,21 @@ html, body {
   --font-display: "Fraunces", serif;
   --font-mono: "Space Mono", monospace;
 
-  /* Ground */
   --color-ink: #0A0511;      /* page background */
   --color-ink-2: #120A1F;    /* panel / card background */
-  --color-ink-3: #1B0F2C;    /* raised panel */
-  --color-line: #2A1B3D;     /* hairline borders, ~slate-800 equivalent */
+  --color-ink-3: #1B0F2C;    /* panel */
+  --color-line: #2A1B3D;     /* borders */
   --color-line-soft: #1E1330;
 
-  /* Text */
-  --color-mist: #9C8BB4;     /* muted body text, ~slate-400 */
-  --color-mist-dim: #6E5E88; /* dimmer muted, ~slate-500/600 */
-  --color-fog: #F3EAFB;      /* near-white heading text */
+  --color-mist: #9C8BB4;     /* muted body text */
+  --color-mist-dim: #6E5E88; /* dimmer muted */
+  --color-fog: #F3EAFB;      /* white heading text */
 
-  /* Arcane (magenta, from logo top) */
   --color-arcane-300: #F17FDA;
   --color-arcane-400: #E85BCE;
   --color-arcane-500: #E63FC4;
   --color-arcane-600: #C22EA3;
 
-  /* Mystic (blue, from logo bottom) */
   --color-mystic-300: #8AA0F5;
   --color-mystic-400: #6684EF;
   --color-mystic-500: #4C6FEF;
@@ -57,7 +53,6 @@ html, body {
   100% { background-position: 240px 240px; }
 }
 
-/* Faint arcane grid backdrop, replaces bg-moving-grid */
 .bg-arcane-field {
   background-color: var(--color-ink);
   background-image:

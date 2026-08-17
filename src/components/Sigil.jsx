@@ -1,15 +1,8 @@
 import { motion } from 'framer-motion';
 
-/**
- * The studio's signature mark: a rotating rune-circle built from the same
- * vocabulary as the logo (diamond apex, angular "A/R" glyph, twin crescent
- * arcs). Used large in the hero, small as a section marker, and as a loading
- * glyph. size in px.
- */
 export default function Sigil({ size = 520, className = '', spin = true }) {
   return (
     <div className={`relative ${className}`} style={{ width: size, height: size }}>
-      {/* outer tick ring */}
       {spin && (
         <motion.svg
           viewBox="0 0 200 200"
@@ -26,7 +19,6 @@ export default function Sigil({ size = 520, className = '', spin = true }) {
         </motion.svg>
       )}
 
-      {/* mid ring, counter-rotating */}
       {spin && (
         <motion.svg
           viewBox="0 0 200 200"
@@ -38,7 +30,6 @@ export default function Sigil({ size = 520, className = '', spin = true }) {
         </motion.svg>
       )}
 
-      {/* twin crescents (from the logo) */}
       <svg viewBox="0 0 200 200" className="absolute inset-0">
         <motion.path
           d="M62 46 A64 64 0 0 0 62 154"
@@ -62,7 +53,6 @@ export default function Sigil({ size = 520, className = '', spin = true }) {
         />
       </svg>
 
-      {/* the rune glyph itself - diamond apex + angular R, drawn like ink settling */}
       <svg viewBox="0 0 200 200" className="absolute inset-0">
         <defs>
           <linearGradient id="runeStroke" x1="0" y1="0" x2="0" y2="1">
