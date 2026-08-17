@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+html, body {
+  background-color: #0A0511;
+}
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Fraunces", serif;
+  --font-mono: "Space Mono", monospace;
+
+  /* Ground */
+  --color-ink: #0A0511;      /* page background */
+  --color-ink-2: #120A1F;    /* panel / card background */
+  --color-ink-3: #1B0F2C;    /* raised panel */
+  --color-line: #2A1B3D;     /* hairline borders, ~slate-800 equivalent */
+  --color-line-soft: #1E1330;
+
+  /* Text */
+  --color-mist: #9C8BB4;     /* muted body text, ~slate-400 */
+  --color-mist-dim: #6E5E88; /* dimmer muted, ~slate-500/600 */
+  --color-fog: #F3EAFB;      /* near-white heading text */
+
+  /* Arcane (magenta, from logo top) */
+  --color-arcane-300: #F17FDA;
+  --color-arcane-400: #E85BCE;
+  --color-arcane-500: #E63FC4;
+  --color-arcane-600: #C22EA3;
+
+  /* Mystic (blue, from logo bottom) */
+  --color-mystic-300: #8AA0F5;
+  --color-mystic-400: #6684EF;
+  --color-mystic-500: #4C6FEF;
+  --color-mystic-600: #3A56CC;
+
+  --animate-marquee: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--marquee-shift, -50%)); }
+}
+
+@keyframes sigil-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes sigil-spin-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes grid-drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 240px 240px; }
+}
+
+/* Faint arcane grid backdrop, replaces bg-moving-grid */
+.bg-arcane-field {
+  background-color: var(--color-ink);
+  background-image:
+    linear-gradient(45deg, transparent calc(50% - 0.6px), rgba(232, 91, 206, 0.06) calc(50% - 0.6px), rgba(232, 91, 206, 0.06) calc(50% + 0.6px), transparent calc(50% + 0.6px)),
+    linear-gradient(-45deg, transparent calc(50% - 0.6px), rgba(76, 111, 239, 0.06) calc(50% - 0.6px), rgba(76, 111, 239, 0.06) calc(50% + 0.6px), transparent calc(50% + 0.6px));
+  background-size: 240px 240px;
+  animation: grid-drift 10s linear infinite;
+}
+
+.text-gradient-arcane {
+  background-image: linear-gradient(120deg, var(--color-arcane-400), var(--color-mystic-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
