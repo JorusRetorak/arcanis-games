@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import NextGenBackground from './NextGenBackground';
+import NextGenBackground from '../assets/NextGenThumb2.png';
 
 const icons = {
   controller: (
