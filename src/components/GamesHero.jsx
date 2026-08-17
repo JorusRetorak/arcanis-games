@@ -59,7 +59,11 @@ export default function GamesHero() {
       </div>
 
       <div className="relative w-full lg:w-1/2 flex items-center justify-center pointer-events-none min-h-[360px] lg:min-h-0">
-        <NextGenBackground />
+        <img 
+          src={NextGenBackground} 
+          alt="NextGen Tennis" 
+          className="w-full h-auto object-contain drop-shadow-2xl"
+        />
       </div>
     </section>
   );
