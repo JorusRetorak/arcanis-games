@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import discordLogo from '../assets/discord.png';
-import devforumLogo from '../assets/devforum.png';
+import tiktokLogo from '../assets/tiktok.png';
 import xLogo from '../assets/tw.webp';
 
 const icons = {
@@ -8,17 +8,6 @@ const icons = {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-5 h-5">
       <circle cx="12" cy="12" r="9" />
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 3" />
-    </svg>
-  ),
-  bolt: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-5 h-5">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M13 3L4 14h6l-1 7 9-11h-6l1-7z" />
-    </svg>
-  ),
-  globe: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-5 h-5">
-      <circle cx="12" cy="12" r="9" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" />
     </svg>
   ),
   bug: (
@@ -40,21 +29,15 @@ const icons = {
 };
 
 const CONTACT_METHODS = [
-  { href: 'https://discord.com/users/344941451689328640', logo: discordLogo, name: 'Discord', handle: '_jorusretorak', badge: 'Preferred' },
-  { href: 'https://devforum.roblox.com/u/jorusretorak/summary', logo: devforumLogo, name: 'Roblox Devforum', handle: 'JorusRetorak', badge: 'Active' },
-  { href: 'https://x.com/JorusDev', logo: xLogo, name: 'X (for contact only)', handle: '@JorusDev', badge: 'Reply via DM' },
-];
-
-const AVAILABILITY = [
-  { icon: 'globe', label: 'Status', value: 'Available', note: 'Open to new projects and collaborations.' },
-  { icon: 'clock', label: 'Average Response', value: '< 24 hours', note: 'Usually much faster on Discord.' },
-  { icon: 'bolt', label: 'Timezone', value: 'CST', note: '(UTC-6)' },
+  { href: 'https://discord.gg/FyZcsytktN', logo: discordLogo, name: 'Discord', handle: 'Community', badge: 'Preferred' },
+  { href: 'https://www.tiktok.com/@arcanis.games1', logo: tiktokLogo, name: 'TikTok', handle: '@arcanis.games1', badge: 'Clips & Updates' },
+  { href: 'https://x.com/arcanis_games', logo: xLogo, name: 'X', handle: '@arcanis_games', badge: 'Updates' },
 ];
 
 const INFO_STRIP = [
   { icon: 'clock', title: 'Response Time', body: 'We usually reply within 24 hours — fastest on Discord.' },
   { icon: 'handshake', title: 'Community', body: 'Join the Discord to chat with the team, share ideas, or get involved.' },
-  { icon: 'bug', title: 'Bug Reports', body: 'Found an issue in NextGen Tennis? Drop it in Discord or Devforum.' },
+  { icon: 'bug', title: 'Bug Reports', body: 'Found an issue in our games? Let us know in Discord.' },
   { icon: 'eye', title: 'Privacy', body: 'Anything you share with us stays confidential.' },
 ];
 
@@ -80,66 +63,42 @@ export default function Contact() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Contact methods */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.5 }}
-          className="border border-line rounded-2xl bg-ink-2/60 p-6 flex flex-col gap-4"
-        >
-          <h3 className="text-xs tracking-[0.2em] text-arcane-400 font-mono font-bold uppercase">Contact Methods</h3>
+      {/* Contact methods */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.5 }}
+        className="border border-line rounded-2xl bg-ink-2/60 p-6 flex flex-col gap-4 max-w-2xl mx-auto w-full"
+      >
+        <h3 className="text-xs tracking-[0.2em] text-arcane-400 font-mono font-bold uppercase">Contact Methods</h3>
 
-          {CONTACT_METHODS.map((c) => (
-            <motion.a
-              key={c.name}
-              href={c.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -3 }}
-              className="flex items-center gap-4 p-4 border border-line rounded-xl hover:border-arcane-500/50 transition-colors"
-            >
-              <img src={c.logo} className="w-11 h-11 object-contain shrink-0" alt={c.name} />
-              <div className="flex flex-col min-w-0">
-                <div className="flex items-center gap-2">
-                  <h4 className="font-bold text-fog truncate">{c.name}</h4>
-                  <span className="text-[10px] uppercase tracking-wide text-arcane-400 border rounded-md px-1.5 py-0.5 shrink-0" style={{ borderColor: 'rgba(232,91,206,0.3)' }}>
-                    {c.badge}
-                  </span>
-                </div>
-                <span className="text-sm text-mist mt-0.5">{c.handle}</span>
+        {CONTACT_METHODS.map((c) => (
+          <motion.a
+            key={c.name}
+            href={c.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ y: -3 }}
+            className="flex items-center gap-4 p-4 border border-line rounded-xl hover:border-arcane-500/50 transition-colors"
+          >
+            <img src={c.logo} className="w-11 h-11 object-contain shrink-0" alt={c.name} />
+            <div className="flex flex-col min-w-0">
+              <div className="flex items-center gap-2">
+                <h4 className="font-bold text-fog truncate">{c.name}</h4>
+                <span className="text-[10px] uppercase tracking-wide text-arcane-400 border rounded-md px-1.5 py-0.5 shrink-0" style={{ borderColor: 'rgba(232,91,206,0.3)' }}>
+                  {c.badge}
+                </span>
               </div>
-            </motion.a>
-          ))}
-
-          <div className="border-t border-line pt-4 text-sm text-mist-dim">
-            Discord is the fastest way to get a response.
-          </div>
-        </motion.div>
-
-        {/* Availability */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="border border-line rounded-2xl bg-ink-2/60 p-6 flex flex-col gap-5"
-        >
-          <h3 className="text-xs tracking-[0.2em] text-arcane-400 font-mono font-bold uppercase">Availability</h3>
-
-          {AVAILABILITY.map((a) => (
-            <div key={a.label} className="flex gap-3">
-              <span className="text-arcane-400 shrink-0 mt-0.5">{icons[a.icon]}</span>
-              <div>
-                <div className="text-[10px] uppercase tracking-wide text-mist-dim">{a.label}</div>
-                <div className="font-bold text-fog">{a.value}</div>
-                <p className="text-sm text-mist-dim mt-0.5">{a.note}</p>
-              </div>
+              <span className="text-sm text-mist mt-0.5">{c.handle}</span>
             </div>
-          ))}
-        </motion.div>
-      </div>
+          </motion.a>
+        ))}
+
+        <div className="border-t border-line pt-4 text-sm text-mist-dim">
+          Discord is the fastest way to get a response.
+        </div>
+      </motion.div>
 
       {/* Info */}
       <motion.div

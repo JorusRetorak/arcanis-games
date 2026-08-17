@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Sigil from './Sigil';
+import NextGenBackground from './NextGenBackground';
 
 const icons = {
   controller: (
@@ -21,9 +21,9 @@ const icons = {
 };
 
 const stats = [
-  { icon: 'controller', value: '1', label: 'Title Live' },
+  { icon: 'controller', value: '1', label: 'Title Developing' },
   { icon: 'users', value: '55K+', label: 'Player Visits' },
-  { icon: 'calendar', value: '6+', label: 'Years Active' },
+  { icon: 'calendar', value: '1+', label: 'Years Active' },
 ];
 
 export default function GamesHero() {
@@ -59,7 +59,7 @@ export default function GamesHero() {
       </div>
 
       <div className="relative w-full lg:w-1/2 flex items-center justify-center pointer-events-none min-h-[360px] lg:min-h-0">
-        <Sigil size={420} />
+        <NextGenBackground />
       </div>
     </section>
   );

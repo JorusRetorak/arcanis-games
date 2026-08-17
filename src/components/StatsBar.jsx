@@ -1,5 +1,5 @@
 const stats = [
-  { value: '6+', label: 'Years Building' },
+  { value: '6+', label: 'Game Developing' },
   { value: '1', label: 'Game Shipped' },
   { value: '55K+', label: 'Player Visits' },
 ];

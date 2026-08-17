@@ -7,6 +7,7 @@ import PillarsGrid from '../components/PillarsGrid';
 import GameGallery from '../components/GameGallery';
 import Eyebrow from '../components/Eyebrow';
 import Sigil from '../components/Sigil';
+import NextGenBackground from '../components/NextGenBackground';
 
 import nextgenVid1 from '../assets/nextgenvideo1.mp4';
 import nextgenVid2 from '../assets/nextgenvideo2.mp4';
@@ -29,13 +30,12 @@ export default function Home() {
           <StudioStatusBadge />
           <span className="mt-6 text-arcane-400 text-xs tracking-[0.3em] font-mono font-bold uppercase">Roblox Game Studio</span>
           <h1 className="text-4xl md:text-6xl font-display font-semibold mt-4 mb-6 text-fog leading-tight">
-            WORLDS WORTH <br />
+            GAMES WORTH <br />
             <span className="text-gradient-arcane">GETTING LOST IN.</span>
           </h1>
           <p className="text-base md:text-lg text-mist max-w-lg">
-            Arcanis Games builds systems-driven Roblox worlds — deep mechanics, sharp UI, and
-            games players keep coming back to. Six years in, and right now we're all-in on
-            NextGen Tennis.
+            Arcanis Games builds highly complex games, with meaningful mechanics and gameplay.
+            We are currently working on Nextgen Tennis, set to release 9/18/2026.
           </p>
 
           <div className="flex gap-4 mt-8">
@@ -43,7 +43,7 @@ export default function Home() {
               style={{ background: 'linear-gradient(120deg, var(--color-arcane-400), var(--color-mystic-400))' }}>
               Play Our Games →
             </a>
-            <a href="https://discord.com/users/344941451689328640" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-line hover:border-arcane-400 hover:text-arcane-400 text-fog font-bold rounded-lg transition-colors">
+            <a href="https://discord.gg/FyZcsytktN" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-line hover:border-arcane-400 hover:text-arcane-400 text-fog font-bold rounded-lg transition-colors">
               Join the Community →
             </a>
           </div>
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         <div className="relative w-full lg:w-1/2 flex items-center justify-center pointer-events-none min-h-[400px] lg:min-h-0">
-          <Sigil size={460} />
+          <NextGenBackground />
         </div>
       </Spotlight>
 
