@@ -7,7 +7,7 @@ import PillarsGrid from '../components/PillarsGrid';
 import GameGallery from '../components/GameGallery';
 import Eyebrow from '../components/Eyebrow';
 import Sigil from '../components/Sigil';
-import NextGenBackground from '../assets/nextgenthumb2.png';
+import NextGenBackground from '../assets/hero-bg.png';
 
 import nextgenVid1 from '../assets/nextgenvideo1.mp4';
 import nextgenVid2 from '../assets/nextgenvideo2.mp4';
