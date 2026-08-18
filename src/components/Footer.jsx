@@ -7,7 +7,7 @@ const MotionLink = motion(Link);
 const quickLinks = [
   { to: '/', label: 'Home' },
   { to: '/games', label: 'Games' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/contact', label: 'Socials' },
 ];
 
 const social = [

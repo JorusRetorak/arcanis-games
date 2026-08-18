@@ -8,7 +8,7 @@ const MotionLink = motion(Link);
 const links = [
   { to: '/', label: 'Home' },
   { to: '/games', label: 'Games' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/contact', label: 'Socials' },
 ];
 
 export default function Navbar() {
